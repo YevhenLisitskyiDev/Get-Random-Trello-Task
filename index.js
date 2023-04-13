@@ -33,7 +33,7 @@ app.post('/upload', async (req, res) => {
     }
 });
 app.post('/new-message', function (req, res) {
-    res.end(req.body);
+    res.end(JSON.stringify(req.body));
     const { message } = req.body;
     console.log('message: ', message, req.body);
     let text = 'Ok';
