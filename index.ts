@@ -2,10 +2,10 @@ import express from 'express'
 import cors from 'cors'
 import axios from 'axios'
 
-import { sendTelegramBotMessage } from './utils/http'
-import { getInfoMessage } from './utils/messages'
-import { createTrelloCard, sendRandomTask } from './utils/trello'
-import { parseYamlBase64 } from './utils/yaml'
+import { sendTelegramBotMessage } from './src/utils/http'
+import { getInfoMessage } from './src/utils/messages'
+import { createTrelloCard, sendRandomTask } from './src/utils/trello'
+import { parseYamlBase64 } from './src/utils/yaml'
 
 const app = express()
 
