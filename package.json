@@ -9,7 +9,7 @@
   "scripts": {
     "start": "nodemon",
     "build": "tsc",
-    "serve": "node api/index.js",
+    "serve": "node index.js",
     "vercel-build": "npm run build"
   },
   "keywords": [],

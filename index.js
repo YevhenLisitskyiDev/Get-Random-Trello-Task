@@ -5,10 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const http_1 = require("./utils/http");
-const messages_1 = require("./utils/messages");
-const trello_1 = require("./utils/trello");
-const yaml_1 = require("./utils/yaml");
+const http_1 = require("./dist/utils/http");
+const messages_1 = require("./dist/utils/messages");
+const trello_1 = require("./dist/utils/trello");
+const yaml_1 = require("./dist/utils/yaml");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.urlencoded({ extended: true }));
