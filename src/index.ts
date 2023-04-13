@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/upload', async (req, res) => {
+  console.log('uploading...')
   const base64YamlContent = req.body.base64YamlContent
   const cardsData = parseYamlBase64(base64YamlContent)
 
