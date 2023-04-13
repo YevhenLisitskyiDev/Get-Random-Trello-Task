@@ -37,7 +37,7 @@ app.post('/upload', async (req, res) => {
 
 app.post('/new-message', function (req, res) {
   const { message } = req.body
-  console.log('message: ', message)
+  console.log('message: ', message, req.body)
   let text = 'Ok'
 
   if (message.text === '/getTask') {
