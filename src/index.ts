@@ -35,7 +35,7 @@ app.post('/new-message', function (req, res) {
   let text = 'Ok'
 
   if (message.text === '/getTask') {
-    sendRandomTask(message, text, res)
+    sendRandomTask(message, res)
   }
 
   if (message.text === '/info') {

@@ -48,7 +48,7 @@ export function createTrelloCard(cardData) {
   })
 }
 
-export function sendRandomTask(message: { chat: { id: string } }, text: string, res: any) {
+export function sendRandomTask(message: { chat: { id: string } }, res: any) {
   trello.get('/1/members/me/boards', function (err, userBoards) {
     if (err) throw err
 
