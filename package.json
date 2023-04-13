@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "nodemon",
     "build": "tsc",
-    "serve": "node dist/app.js",
+    "serve": "node dist/index.js",
     "vercel-build": "npm run build"
   },
   "keywords": [],
