@@ -12,6 +12,11 @@ app.use(cors())
 
 app.use(express.urlencoded({ extended: true }))
 
+app.get('/', (req, res) => {
+  console.log('Hello World!')
+  res.send('Hello World!')
+})
+
 app.post('/upload', async (req, res) => {
   const base64YamlContent = req.body.base64YamlContent
   const cardsData = parseYamlBase64(base64YamlContent)
@@ -31,6 +36,7 @@ app.post('/upload', async (req, res) => {
 
 app.post('/new-message', function (req, res) {
   const { message } = req.body
+  console.log('message: ', message)
   let text = 'Ok'
 
   if (message.text === '/getTask') {
