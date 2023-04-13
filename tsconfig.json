@@ -1,7 +1,14 @@
 {
-  "include": ["./src/*", "index.ts"],
   "compilerOptions": {
-    "lib": ["esnext"],
-    "esModuleInterop": true
-  }
+    "target": "es2018",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["src"]
 }

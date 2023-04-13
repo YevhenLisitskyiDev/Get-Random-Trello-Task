@@ -1,5 +1,5 @@
 import axios from 'axios'
-const { telegram_bot_token } = require('../config.json')
+import { telegram_bot_token } from '../config.json'
 
 export const sendTelegramBotMessage = (
   message: { chat: { id: string } },

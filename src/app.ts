@@ -1,11 +1,10 @@
 import express from 'express'
 import cors from 'cors'
-import axios from 'axios'
 
-import { sendTelegramBotMessage } from './src/utils/http'
-import { getInfoMessage } from './src/utils/messages'
-import { createTrelloCard, sendRandomTask } from './src/utils/trello'
-import { parseYamlBase64 } from './src/utils/yaml'
+import { sendTelegramBotMessage } from './utils/http'
+import { getInfoMessage } from './utils/messages'
+import { createTrelloCard, sendRandomTask } from './utils/trello'
+import { parseYamlBase64 } from './utils/yaml'
 
 const app = express()
 
@@ -18,7 +17,7 @@ app.post('/upload', async (req, res) => {
   const cardsData = parseYamlBase64(base64YamlContent)
 
   try {
-    const cardCreationPromises = cardsData.map(async (cardData) => {
+    const cardCreationPromises = cardsData.map(async (cardData: any) => {
       await createTrelloCard(cardData)
     })
 
@@ -45,7 +44,7 @@ app.post('/new-message', function (req, res) {
   sendTelegramBotMessage(message, text, res)
 })
 
-const PORT = process.env.PORT || 3004
+const PORT = process.env.PORT || 8000
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
